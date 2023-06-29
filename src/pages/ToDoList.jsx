@@ -17,7 +17,6 @@ export default function ToDoList() {
         };
         setTasks([...tasks, task]);
         setNewTask('');
-        console.log(tasks);
     };
 
     const handleDeleteTask = (taskId) => {
@@ -46,7 +45,7 @@ export default function ToDoList() {
                     value={newTask}
                     onChange={(e) => setNewTask(e.target.value)}
                     onKeyUp={(e) => {
-                        if (e.key === 'Enter') {
+                        if (e.key === 13) {
                             addTask();
                         }
                     }}

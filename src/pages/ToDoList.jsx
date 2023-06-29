@@ -44,8 +44,8 @@ export default function ToDoList() {
                     placeholder="Enter task"
                     value={newTask}
                     onChange={(e) => setNewTask(e.target.value)}
-                    onKeyUp={(e) => {
-                        if (e.key === 13) {
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.keyCode === 13) {
                             addTask();
                         }
                     }}
